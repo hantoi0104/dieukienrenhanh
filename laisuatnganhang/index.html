@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Tien goc vay ban dau: <br>
+<input id="ip1" type="text"><br>
+Số tháng vay: <br>
+<input id="ip2" type="text"><br>
+Lãi suất vay: <br>
+<input id="ip3" type="text"><br>
+<input type="submit" value="Tính tiền" onclick="tinhtien()">
+<p id="demo"> Tổng tiền phải trả </p>
+<script>
+    function tinhtien(){
+    let tiengoc = document.getElementById("ip1").value;
+    let thang = document.getElementById("ip2").value;
+    let lai = document.getElementById("ip3").value;
+    let count = 0;
+
+    while ( count < parseInt(thang)){
+        tiengoc = tiengoc*( 1 + parseFloat(lai) );
+        count = count + 1;
+    }
+    document.getElementById("demo").innerHTML = tiengoc ;
+        }
+</script>
+</body>
+</html>

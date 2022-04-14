@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào tháng: <br>
+<input type="text" id="inPutDay">
+<input type="submit" value="Tìm ngày" onclick="timngay()">
+<p id="ketqua"></p>
+</body>
+<script>
+    function timngay() {
+        let thang = parseInt(document.querySelector("#inPutDay").value)
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.querySelector("#ketqua").innerHTML = "Tháng " + thang + " có 31 ngày"
+                break
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.querySelector("#ketqua").innerHTML = "Tháng " + thang + " có 30 ngày"
+                break
+            case 2:
+                document.querySelector("#ketqua").innerHTML = "Tháng " + thang + " có 28 ngày"
+        }
+
+    }
+</script>
+</html>

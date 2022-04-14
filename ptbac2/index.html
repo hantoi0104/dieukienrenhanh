@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h3 {
+            text-align: center;
+        }
+
+        div {
+            background-color: cadetblue;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h3> Phương trình bậc 2 </h3>
+    Nhập a:<br>
+    <input id="ip1" type="text"><br>
+    Nhập b:<br>
+    <input id="ip2" type="text"><br>
+    Nhập c:<br>
+    <input id="ip3" type="text"><br><br>
+    <button onclick="ptbac2()"> submit</button>
+    <p id="ketqua"> Nghiệm của phương trình là:</p>
+</div>
+<script>
+    function ptbac2() {
+        let a = document.querySelector("#ip1").value;
+        let b = document.querySelector("#ip2").value;
+        let c = document.querySelector("#ip3").value;
+        let x1, x2;
+        if (a != 0) {
+
+            let delta = b * b - 4 * a * c;
+
+            if (delta < 0) {
+                document.querySelector("#ketqua").innerHTML = "Phương trình vô nghiệm"
+            } else if (delta == 0) {
+                x2 = -b / (2 * a);
+                document.querySelector("#ketqua").innerHTML = "phương trình có nghiệm kép x1=x2=" + x2;
+            } else {
+                x1 = (-b + Math.sqrt(parseInt(delta))) / (2 * a);
+                x2 = (-b - Math.sqrt(parseInt(delta))) / (2 * a);
+                document.querySelector("#ketqua").innerHTML = "phương trình có 2 nghiệm x1= " + x1 + " x2= " + x2;
+
+            }
+        } else {
+alert("giải phương trình bậc nhất")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhap so dien nhà ban: <br>
+<input id="ip1">
+<input type="submit" value="tinh tien" onclick="tinhtien()">
+<p id="demo"> Tiền điện bạn phải trả là:
+</p>
+<script>
+    function tinhtien(){
+        let sodien = parseInt(document.querySelector("#ip1").value)
+        alert(sodien)
+        let tongtien;
+        let bac1= 1.678
+        let bac2= 1.734
+        let bac3= 2.014
+        let bac4= 2.536
+        let bac5= 2.834
+        let bac6= 2.927
+        if(sodien <= 50){
+            tongtien = sodien*bac1;
+        }
+        else if( sodien<=100){
+            tongtien = 50*bac1 +(sodien-50)*bac2 ;
+        }
+        else if( sodien<=100){
+            tongtien = 50*bac1 +(sodien-50)*bac2;
+        }
+            else if(sodien<=200) {
+            tongtien = 50 * bac1 + (50 * bac2) + ((sodien - 100) * bac3);
+        }
+            else if(sodien<=300){
+            tongtien = 50*bac1+(50*bac2)+(100*bac3)+((sodien-200)*bac4);
+        }
+            else if(sodien<=400){
+            tongtien = 50*bac1+(50*bac2)+(100*bac3)+(100*bac4)+((sodien-300)*bac5)
+        }
+            else if (sodien>400) {
+            tongtien = 50*bac1+(50*bac2)+(100*bac3)+(100*bac4)+(100*bac5)+((sodien-400)*bac6);
+        }
+            document.querySelector("#demo").innerHTML = "Tổng tiền điện phải đóng là: "+tongtien*1000;
+    }
+</script>
+</body>
+</html>

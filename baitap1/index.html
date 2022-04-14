@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào điểm cuả học sinh:<br>
+<input type="text">
+<button onclick="xeploai()"> Nhập </button>
+<p></p>
+<script>
+    function xeploai() {
+
+        let diem = document.querySelector("input").value;
+        if (diem >= 8) {
+            document.querySelector("p").innerHTML = "Học sinh giỏi";
+        } else if (diem >= 6.5) {
+            document.querySelector("p").innerHTML = "Học sinh khá";
+        }
+    }
+</script>
+</body>
+</html>

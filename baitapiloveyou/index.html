@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2{
+            margin-left: 400px ;
+        }
+        #ip1{
+            background-color:red;
+            /*margin-left: 400px;*/
+            width:30px;
+            position: absolute;
+        }
+        #ip2{
+            position: absolute;
+            background-color: red;
+            /*margin-left: 400px;*/
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<h2> Do you love me? </h2>
+<input id="ip1" type="button" value="Yes">
+<input id="ip2" type="button" value="No" onmouseover="move()">
+<script>
+   function move(){
+       let a =document.getElementById("ip2")
+       a.style.marginTop = Math.random()*500 + "px";
+       a.style.marginLeft = Math.random()*500 + "px";
+   }
+</script>
+</body>
+</html>

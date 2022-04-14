@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="display">
+        <input type="text" id="dispplay">
+    </div>
+    <div class="buttons">
+        <div class="row">
+            <input id="ip1" type="button" value="1" onclick="clicknuber(1)">
+            <input type="button" value="2" onclick="clicknuber(2)">
+            <input type="button" value="3" onclick="clicknuber(3)">
+            <input type="button" value="+" onclick="clicknuber('+')">
+        </div>
+        <div class="row">
+            <input type="button" value="4" onclick="clicknuber(4)">
+            <input type="button" value="5" onclick="clicknuber(5)">
+            <input type="button" value="6" onclick="clicknuber(6)">
+            <input type="button" value="-" onclick="clicknuber('-')">
+        </div>
+        <div class="row">
+            <input type="button" value="7" onclick="clicknuber(7)">
+            <input type="button" value="8" onclick="clicknuber(8)">
+            <input type="button" value="9" onclick="clicknuber(9)">
+            <input type="button" value="*" onclick="clicknuber('*')">
+        </div>
+        <div class="row">
+            <input type="button" value="C" onclick="clean()">
+            <input type="button" value="0" onclick="clicknuber(0)">
+            <input type="button" value="/" onclick="clicknuber('/')">
+            <input type="button" onclick="calculator()" value='='>
+        </div>
+    </div>
+</div>
+<script>
+    function clicknuber(number) {
+        document.getElementById("dispplay").value += number;
+    }
+
+    function clean() {
+        document.getElementById("dispplay").value = "";
+    }
+   function calculator()
+   {
+     let a = document.getElementById("dispplay").value;
+       document.getElementById("dispplay").value = eval(a);
+   }
+</script>
+</body>
+</html>
